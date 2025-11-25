@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musab's Portfolio Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 1.8em; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        p, ul, li {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        ul { text-align: left; margin: 20px 0; }
+        .icon { color: #3498db; margin-right: 10px; }
+        .chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .bar {
+            width: 20%;
+            background: #ecf0f1;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 30px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            transition: width 1s ease;
+        }
+        .bar-label { font-size: 0.9em; margin-top: 5px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background: #f2f2f2; }
+        .nav {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        button:hover { background: #2980b9; }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #ecf0f1;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide1">
+            <div class="profile-img"><i class="fas fa-user"></i></div>
+            <h1>Musab</h1>
+            <p><i class="fas fa-briefcase icon"></i>Digital Marketing & Campaign Management</p>
+            <p><i class="fas fa-clock icon"></i>3 Years of Experience</p>
+            <p>Portfolio Presentation</p>
+        </div>
+
+        <!-- Slide 2: About Me -->
+        <div class="slide" id="slide2">
+            <h2>About Me</h2>
+            <p>Digital Marketing Specialist with 3 years of experience in running and managing successful online campaigns.</p>
+            <ul>
+                <li><i class="fas fa-check icon"></i>Skilled in social media marketing and advertising</li>
+                <li><i class="fas fa-check icon"></i>Expert in budgeting, optimization, and performance analysis</li>
+                <li><i class="fas fa-check icon"></i>Passionate about driving impactful results for clients</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Previous Clients & Websites -->
+        <div class="slide" id="slide3">
+            <h2>Previous Clients & Websites</h2>
+            <p>Successfully collaborated with diverse clients across various industries:</p>
+            <ul>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.narmin.pk">www.narmin.pk</a></li>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.narkins.com">www.narkins.com</a></li>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.auranexcreative.shop">www.auranexcreative.shop</a></li>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.micoequipment.com">www.micoequipment.com</a></li>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.odolution.com">https://www.odolution.com</a></li>
+                <li><i class="fas fa-globe icon"></i><a href="https://www.usconstruction.com">https://www.usconstruction.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: Campaign Performance Overview -->
+        <div class="slide" id="slide4">
+            <h2>Campaign Performance Overview</h2>
+            <p>Successfully managed multiple digital campaigns, focusing on reach, engagement, and ROI.</p>
+            <ul>
+                <li><i class="fas fa-chart-line icon"></i>Experience in budgeting, optimization, and performance analysis</li>
+                <li><i class="fas fa-target icon"></i>Achieved high reach and impressions across platforms</li>
+                <li><i class="fas fa-lightbulb icon"></i>Recommendations for scaling based on data-driven insights</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5: Campaign Example 1 -->
+        <div class="slide" id="slide5">
+            <h2>Campaign Example 1 - AuraNex Creative</h2>
+            <table>
+                <tr><th>Metric</th><th>Value</th></tr>
+                <tr><td>Campaign Type</td><td>Page Likes</td></tr>
+                <tr><td>Total Follows/Likes</td><td>209</td></tr>
+                <tr><td>Cost per Follow/Like</td><td>PKR 8.56</td></tr>
+                <tr><td>Amount Spent</td><td>PKR 1,789.61</td></tr>
+                <tr><td>Reach</td><td>1,975</td></tr>
+                <tr><td>Impressions</td><td>2,971</td></tr>
+            </table>
+            <p><strong>Recommendation:</strong> Scale high-performing campaign by adding more budget.</p>
+            <div class="chart">
+                <div class="bar"><div class="bar-fill" style="width: 80%;"></div><div class="bar-label">Reach</div></div>
+                <div class="bar"><div class="bar-fill" style="width: 60%;"></div><div class="bar-label">Impressions</div></div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Campaign Example 2 -->
+        <div class="slide" id="slide6">
+            <h2>Campaign Example 2 - PP Sales Campaign</h2>
+            <table>
+                <tr><th>Metric</th><th>Value</th></tr>
+                <tr><td>Campaign Type</td><td>Sales</td></tr>
+                <tr><td>Website Purchases</td><td>0</td></tr>
+                <tr><td>Cost per Website Purchase</td><td>PKR 0.00</td></tr>
+                <tr><td>Amount Spent</td><td>PKR 129.87</td></tr>
+                <tr><td>Reach</td><td>162</td></tr>
+                <tr><td>Impressions</td><td>205</td></tr>
+                <tr><td>Budget</td><td>PKR 3,000.00 per day</td></tr>
+            </table>
+            <p><strong>Recommendation:</strong> Optimize targeting to improve conversion rates.</p>
+            <div class="chart">
+                <div class="bar"><div class="bar-fill" style="width: 20%;"></div><div class="bar-label">Reach</div></div>
+                <div class="bar"><div class="bar-fill" style="width: 15%;"></div><div class="bar-label">Impressions</div></div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Campaign Example 3 -->
+        <div class="slide" id="slide7">
+            <h2>Campaign Example 3 - BB and MM Card Campaign</h2>
+            <table>
+                <tr><th>Metric</th><th>Value</th></tr>
+                <tr><td>Campaign Type</td><td>Sales</td></tr>
+                <tr><td>Website Purchases</td><td>0</td></tr>
+                <tr><td>Cost per Website Purchase</td><td>PKR 0.00</td></tr>
+                <tr><td>Amount Spent</td><td>PKR 6,391.38</td></tr>
+                <tr><td>Reach</td><td>5,360</td></tr>
+                <tr><td>Impressions</td><td>6,506</td></tr>
+            </table>
+            <p><strong>Recommendation:</strong> Increase budget for better results and higher conversions.</p>
+            <div class="chart">
+                <div class="bar"><div class="bar-fill" style="width: 90%;"></div><div class="bar-label">Reach</div></div>
+                <div class="bar"><div class="bar-fill" style="width: 85%;"></div><div class="bar-label">Impressions</div></div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Total Campaign Spend and Insights -->
+        <div class="slide" id="slide8">
+            <h2>Total Campaign Spend and Insights</h2>
+            <ul>
+                <li><i class="fas fa-money-bill icon"></i>Total Amount Spent Across Campaigns: <strong>PKR 147,265.16</strong></li>
+                <li><i class="fas fa-star icon"></i>Opportunity Score: <strong>92 points</strong></li>
+                <li><i class="fas fa-lightbulb icon"></i>Recommendations: Optimize and scale high-performing campaigns for maximum ROI</li>
+            </ul>
+            <p>Focus on data-driven strategies to enhance performance and reduce costs.</p>
+        </div>
+
+        <!-- Slide 9: Managed Client Accounts -->
+        <div class="slide" id="slide9">
+            <h2>Managed Client Accounts</h2>
+            <p>Handled social media accounts for the following clients:</p>
+            <ul>
+                <li><i class="fab fa-facebook icon"></i>AuraNex Creative (Facebook & Instagram)</li>
+                <li><i class="fab fa-facebook icon"></i>US Construction (Facebook)</li>
+                <li><i class="fab fa-facebook icon"></i>Vava.fashionz (Facebook & Instagram)</li>
+                <li><i class="fab fa-facebook icon"></i>Fornello Pizza (Facebook)</li>
+                <li><i class="fab fa-facebook icon"></i>Laptop Wala (Facebook)</li>
+                <li><i class="fab fa-facebook icon"></i>The Wedder's (Facebook & Instagram)</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Summary -->
+        <div class="slide" id="slide10">
+            <h2>Summary</h2>
+            <ul>
+                <li><i class="fas fa-trophy icon"></i>Proven track record of managing diverse campaigns and clients</li>
+                <li><i class="fas fa-bullseye icon"></i>Ability to maximize reach and impressions while optimizing budget</li>
+                <li><i class="fas fa-rocket icon"></i>Strong recommendations for scaling campaigns effectively</li>
+                <li><i class="fas fa-handshake icon"></i>Committed to delivering impactful digital marketing results</li>
+            </ul>
+            <p>Thank you for your time. Let's connect to discuss opportunities!</p>
+        </div>
+
+        <!-- Slide 11: Contact Information -->
+        <div class="slide" id="slide11">
+            <h2>Contact Information</h2>
+            <p><i class="fas fa-user icon"></i>Name: Musab</p>
+            <p><i class="fas fa-envelope icon"></i>Email: <a href="mailto:muhammadwasay870@gmail.com">muhammadwasay870@gmail.com</a></p>
+            <p><i class="fas fa-phone icon"></i>Phone: 03357765486</p>
+            <p>Feel free to reach out for collaborations or inquiries.</p>
+        </div>
+
+        <div class="nav">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 11;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            document.getElementById('slide' + n).classList.add('active');
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentSlide = currentSlide > 1 ? currentSlide - 1 : totalSlides;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
